@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for f in $*; do
+    python metro.py < $f | ./metro | sed 's/Nothing/ /g' | sed 's/Just //g'
+done
